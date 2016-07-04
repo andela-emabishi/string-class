@@ -38,3 +38,17 @@ String.prototype.words = function () {
   var splitter = new RegExp(/\W+/);
   return this.split(splitter);
 };
+
+String.prototype.wordCount = function () {
+  var count = 0;
+  this.words().forEach(() => {
+    count += 1;
+
+  });
+
+  return count;
+};
+
+String.prototype.toCurrency = function () {
+  return  (parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '1,')).toString();
+};
