@@ -89,6 +89,27 @@ describe('String Class Extension tests', () => {
       expect(typeof 'A rose by any other name'.words()).toBe('object');
       expect(Array.isArray('A rose by any other name'.words())).toBeTruthy();
     });
+
+  });
+
+  describe('Test wordCount', () => {
+    it('should return the number of words in the string.', () => {
+      expect('A rose by any other name'.wordCount()).toEqual(6);
+      expect('A rose by any other name'.wordCount()).toBeDefined();
+      expect(typeof 'A rose by any other name'.wordCount()).toBe('number');
+
+    });
+  });
+
+  describe('Test toCurrency', () => {
+    it('should return a currency representation of the string', () => {
+      expect('11111.11'.toCurrency()).toEqual('11,111.11');
+      expect('11111'.toCurrency()).toEqual('11,111.00');
+      expect('11111111.11'.toCurrency()).toEqual('11,111,111.11');
+      expect('11111.11'.toCurrency()).toBeDefined();
+      expect(typeof '11111.11'.toCurrency()).toBe('string');
+
+    });
   });
 
 });
