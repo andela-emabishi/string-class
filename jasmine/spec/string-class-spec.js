@@ -35,6 +35,7 @@ describe('String Class Extension tests', () => {
     it('should return a string', () => {
       expect(typeof 'Lowercase'.toUpper()).toBe('string');
     });
+
   });
 
   describe('Test toLower', () => {
@@ -47,6 +48,7 @@ describe('String Class Extension tests', () => {
     it('should return a string', () => {
       expect(typeof 'Lowercase'.toLower()).toBe('string');
     });
+
   });
 
   describe('Test upperCaseFirst', () => {
@@ -68,6 +70,24 @@ describe('String Class Extension tests', () => {
       expect('This is not a question'.isQuestion()).toBeFalsy();
       expect('Is this a question?'.isQuestion()).toBeDefined();
 
+    });
+
+  });
+
+  describe('Test words', () => {
+    it('should return a list of the words in the string, as an array', () => {
+      expect('A rose by any other name'.words()).toBeDefined();
+      expect('A rose by any other name'.words()).toEqual(['A','rose','by','any','other','name']);
+      expect('A:rose,by?any!other$name'.words()).toEqual(['A','rose','by','any','other','name']);
+      expect('rose'.words()).toEqual(['rose']);
+      expect('rose'.words()).toEqual(['rose']);
+      expect(''.words()).toEqual(['']);
+
+    });
+
+    it('should verify that the result of the words method is an array object', () => {
+      expect(typeof 'A rose by any other name'.words()).toBe('object');
+      expect(Array.isArray('A rose by any other name'.words())).toBeTruthy();
     });
   });
 
