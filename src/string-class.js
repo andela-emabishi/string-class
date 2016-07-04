@@ -33,3 +33,8 @@ String.prototype.isQuestion = function () {
   var quest = new RegExp(/\?$/);
   return quest.test(this) ? true : false;
 };
+
+String.prototype.words = function () {
+  var splitter = new RegExp(/\W+/);
+  return this.split(splitter);
+};
