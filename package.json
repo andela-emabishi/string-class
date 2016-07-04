@@ -1,0 +1,26 @@
+{
+  "name": "string-class",
+  "version": "1.0.0",
+  "description": "Enhance functionality of JavaScript string class",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-emabishi/string-class.git"
+  },
+  "keywords": [
+    "jasmine",
+    "jasmine-node",
+    "tests",
+    "npm",
+    "class"
+  ],
+  "author": "Elizabeth Mabishi <frankiemabishi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-emabishi/string-class/issues"
+  },
+  "homepage": "https://github.com/andela-emabishi/string-class#readme"
+}
