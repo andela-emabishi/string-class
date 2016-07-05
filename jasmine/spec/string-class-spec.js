@@ -30,6 +30,13 @@ describe('String Class Extension tests', () => {
     it('should return a string', () => {
       expect(typeof 'Lowercase'.toUpper()).toBe('string');
     });
+
+    it('should verify that the inbuilt toUpper string method was not called', () => {
+      spyOn(String.prototype, 'toUpperCase');
+      const spoof = 'JamesBond';
+      spoof.toUpper();
+      expect(String.prototype.toUpperCase).not.toHaveBeenCalled();
+    });
   });
 
   describe('Test toLower', () => {
@@ -53,6 +60,13 @@ describe('String Class Extension tests', () => {
 
     it('should return a string', () => {
       expect(typeof 'Uppercase'.ucFirst()).toBe('string');
+    });
+
+    it('should verify that the inbuilt toUpper string method was not called', () => {
+      spyOn(String.prototype, 'toLowerCase');
+      const spoof = 'Ian Flemming';
+      spoof.toUpper();
+      expect(String.prototype.toLowerCase).not.toHaveBeenCalled();
     });
   });
 
