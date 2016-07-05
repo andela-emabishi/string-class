@@ -5,7 +5,7 @@ Extend the native JavaScript string class to extend its string manipulation feat
 
 ### Functionality
 #### hasVowels
-This method evaluates to true or false depending on whether the input string has vowels.
+This method evaluates to true if the input string has vowels and false if it does not.
 
 ```javaScript
 'No vowels'.hasVowels() would yield true
