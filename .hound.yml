@@ -6,4 +6,9 @@ eslint:
   enabled: true
   config_file: .eslintrc.json
 javascript:
-  ignore_file: /jasmine/lib
+  ignore_file: /jasmine/lib/jasmine-2.3.4/boot.js
+  ignore_file: /jasmine/lib/jasmine-2.3.4/console.js
+  ignore_file: /jasmine/lib/jasmine-2.3.4/jasmine-html.js
+  ignore_file: /jasmine/lib/jasmine-2.3.4/jasmine.css
+  ignore_file: /jasmine/lib/jasmine-2.3.4/jasmine.js
+  ignore_file: /node_modules
