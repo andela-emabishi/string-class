@@ -1,3 +1,4 @@
+// Disable eslint do not modify native methods
 /* eslint-disable no-extend-native */
 
 String.prototype.hasVowels = function hasVowels() {
@@ -20,7 +21,7 @@ String.prototype.toLower = function toLower() {
 };
 
 String.prototype.ucFirst = function ucFirst() {
-  return [this.charAt(0).toUpper(), this.slice(1)].join('');
+  return this[0].toUpper() + this.slice(1);
 };
 
 String.prototype.isQuestion = function isQuestion() {
