@@ -50,5 +50,10 @@ String.prototype.wordCount = function () {
 };
 
 String.prototype.toCurrency = function () {
-  return  (parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '1,')).toString();
+  return  (parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')).toString();
+};
+
+String.prototype.fromCurrency = function () {
+  return Number(this.replace(/\,/,''));
+
 };
