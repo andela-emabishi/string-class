@@ -1,12 +1,14 @@
-String.prototype.hasVowels = function() {
-  var vowels = new RegExp('[aeiou]', 'i');
-  return vowels.test(this) ? true : false;
+/* eslint-disable no-extend-native */
+
+String.prototype.hasVowels = function hasVowels() {
+  const vowels = new RegExp('[aeiou]', 'i');
+  return vowels.test(this);
 };
 
-String.prototype.toUpper = function () {
-  var newString = '';
-  var upper = new RegExp('[a-z]');
-  for (var x = 0; x < this.length; x++) {
+String.prototype.toUpper = function toUpper() {
+  let newString = '';
+  const upper = new RegExp('[a-z]');
+  for (let x = 0; x < this.length; x++) {
     upper.test(this[x]) ?
     newString += String.fromCharCode((this.charCodeAt(x)) - 32) :
     newString += this[x];
@@ -14,10 +16,10 @@ String.prototype.toUpper = function () {
   return newString;
 };
 
-String.prototype.toLower = function () {
-  var newString = '';
-  var upper = new RegExp('[A-Z]');
-  for (var x = 0; x < this.length; x++) {
+String.prototype.toLower = function toLower() {
+  let newString = '';
+  const upper = new RegExp('[A-Z]');
+  for (let x = 0; x < this.length; x++) {
     upper.test(this[x]) ?
     newString += String.fromCharCode((this.charCodeAt(x)) + 32) :
     newString += this[x];
@@ -25,36 +27,34 @@ String.prototype.toLower = function () {
   return newString;
 };
 
-String.prototype.ucFirst = function () {
+String.prototype.ucFirst = function ucFirst() {
   return [this.charAt(0).toUpper(), this.slice(1)].join('');
 };
 
-String.prototype.isQuestion = function () {
-  var quest = new RegExp(/\?$/);
-  return quest.test(this) ? true : false;
+String.prototype.isQuestion = function isQuestion() {
+  const quest = new RegExp(/\?$/);
+  return quest.test(this);
 };
 
-String.prototype.words = function () {
-  var splitter = new RegExp(/\W+/);
+String.prototype.words = function words() {
+  const splitter = new RegExp(/\W+/);
   return this.split(splitter);
 };
 
-String.prototype.wordCount = function () {
-  var count = 0;
+String.prototype.wordCount = function wordCount() {
+  let count = 0;
   this.words().forEach(() => {
     count += 1;
-
   });
 
   return count;
 };
 
-String.prototype.toCurrency = function () {
+String.prototype.toCurrency = function toCurrency() {
   return (parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'))
   .toString();
 };
 
-String.prototype.fromCurrency = function () {
-  return Number(this.replace(/\,/,''));
-
+String.prototype.fromCurrency = function fromCurrency() {
+  return Number(this.replace(/,/, ''));
 };
