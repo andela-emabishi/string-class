@@ -8,58 +8,58 @@ Extend the native JavaScript string class to extend its string manipulation feat
 This method evaluates to true or false depending on whether the input string has vowels.
 
 ```javaScript
-'No vowels'.hasVowels() would yield `true`
+'No vowels'.hasVowels() would yield true
 ```
 
 #### toUpper
 This Method returns the input string in upper case.
 ```javaScript
-'lowercase'.toUpper() would yield `LOWERCASE`
+'lowercase'.toUpper() would yield LOWERCASE
 ```
 
 #### toLower
 This Method returns an input string in lower case.
 
 ```javaScript
-'UPPERCASE'.toLower() would yield `uppercase`
+'UPPERCASE'.toLower() would yield uppercase
 ```
 
 #### ucFirst
 This Method returns the input string with the first letter in upper case.
 
 ```javaScript
-'titlecase'.ucFirst() would yield `Titlecase`
+'titlecase'.ucFirst() would yield Titlecase
 ```
 
 #### isQuestion
 This Method returns true or false depending on whether the input string is a question.
 
 ```javaScript
-'This is not a question.'.isQuestion() would yield `false`
+'This is not a question.'.isQuestion() would yield false
 ```
 
 #### words
 This Method returns an array with the words in the input string.
 ```javaScript
-'A rose by any other name.'.words() would yield `['A','rose','by','any','other','name']`
+'A rose by any other name.'.words() would yield ['A','rose','by','any','other','name']
 ```
 
 #### wordCount
 This Method returns a count of the number of words in a string.
 ```javaScript
-'A rose by any other name.'.wordCount() would yield `6`
+'A rose by any other name.'.wordCount() would yield 6
 ```
 
 #### toCurrency
 This Method returns a currency representation of the input string.
 ```javaScript
-'12345.11'.toCurrency() would yield `12,345.11`
+'12345.11'.toCurrency() would yield 12,345.11
 ```
 
 #### fromCurrency
 This Method returns a number representation of the input currency string.
 ```javaScript
-'12,345.11'.fromCurrency() would yield `12345.11`
+'12,345.11'.fromCurrency() would yield 12345.11
 ```
 
 
