@@ -105,11 +105,29 @@ describe('String Class Extension tests', () => {
     it('should return a currency representation of the string', () => {
       expect('11111.11'.toCurrency()).toEqual('11,111.11');
       expect('11111'.toCurrency()).toEqual('11,111.00');
-      expect('11111111.11'.toCurrency()).toEqual('11,111,111.11');
-      expect('11111.11'.toCurrency()).toBeDefined();
-      expect(typeof '11111.11'.toCurrency()).toBe('string');
+      expect('21111111.11'.toCurrency()).toEqual('21,111,111.11');
 
+    });
+
+    it('should return a string', () => {
+      expect(typeof '11111.11'.toCurrency()).toBe('string');
+      expect('11111.11'.toCurrency()).toBeDefined();
     });
   });
 
+  describe('Test fromCurrency', () => {
+
+    it('should return a number representation of the currency string', () => {
+      expect('11,111.11'.fromCurrency()).toEqual(11111.11);
+      expect('11111'.fromCurrency()).toEqual(11111.00);
+      expect('21111111.11'.fromCurrency()).toEqual(21111111.11);
+  
+    });
+
+    it('should return a number', () => {
+      expect(typeof '11,111.11'.fromCurrency()).toBe('number');
+      expect('11,111.11'.fromCurrency()).toBeDefined();
+    });
+
+  });
 });
