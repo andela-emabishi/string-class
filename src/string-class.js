@@ -6,25 +6,17 @@ String.prototype.hasVowels = function hasVowels() {
 };
 
 String.prototype.toUpper = function toUpper() {
-  let newString = '';
-  const upper = new RegExp('[a-z]');
-  for (let x = 0; x < this.length; x++) {
-    upper.test(this[x]) ?
-    newString += String.fromCharCode((this.charCodeAt(x)) - 32) :
-    newString += this[x];
-  }
-  return newString;
+  const upper = new RegExp('[a-z]', 'g');
+  return this.replace(upper, function transform(letter) {
+    return String.fromCharCode(letter.charCodeAt(0) - 32);
+  });
 };
 
 String.prototype.toLower = function toLower() {
-  let newString = '';
-  const upper = new RegExp('[A-Z]');
-  for (let x = 0; x < this.length; x++) {
-    upper.test(this[x]) ?
-    newString += String.fromCharCode((this.charCodeAt(x)) + 32) :
-    newString += this[x];
-  }
-  return newString;
+  const lower = new RegExp('[A-Z]', 'g');
+  return this.replace(lower, function transform(letter) {
+    return String.fromCharCode(letter.charCodeAt(0) + 32);
+  });
 };
 
 String.prototype.ucFirst = function ucFirst() {
@@ -42,12 +34,7 @@ String.prototype.words = function words() {
 };
 
 String.prototype.wordCount = function wordCount() {
-  let count = 0;
-  this.words().forEach(() => {
-    count += 1;
-  });
-
-  return count;
+  return this.words().length;
 };
 
 String.prototype.toCurrency = function toCurrency() {
