@@ -1,4 +1,5 @@
 ## Andela Javascript Checkpoint 2: string-class
+[![Build Status](https://travis-ci.org/andela-emabishi/string-class.svg?branch=develop)](https://travis-ci.org/andela-emabishi/string-class)
 
 ### Description
 Extend the native JavaScript string class to extend its string manipulation features.
