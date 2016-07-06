@@ -64,7 +64,7 @@ This Method returns a number representation of the input currency string.
 ```
 
 
-#### Dependencies
+#### Tests
 To run the tests in a browser environment:
 * Clone this repository with the command: `git clone https://github.com/andela-emabishi/string-class.git`
 * Install [node.js v6.2.2] (https://nodejs.org/en/) on your machine.
