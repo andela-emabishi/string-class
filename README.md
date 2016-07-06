@@ -54,7 +54,7 @@ This Method returns a count of the number of words in a string.
 #### toCurrency
 This Method returns a currency representation of the input string.
 ```javaScript
-'12345.11'.toCurrency() would yield 12,345.11
+'12345.11'.toCurrency() would yield `12,345.11`
 ```
 
 #### fromCurrency
