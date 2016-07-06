@@ -73,7 +73,7 @@ To run the tests in a browser environment:
 * Copy the address given i.e. `http://127.0.0.1:8080` into a browser of your choice. From the browser, click into the jasmine then SpecRunner folder or use `http://127.0.0.1:8080/jasmine/SpecRunner.html` to run.
 
 To run the tests in a node terminal environment:
-* Change directory into the root of the repository i.e `string-class` and run the command `npm test`. This will run the tests and generate an istanbul test coverage report which can also be accesses through the path `coverage/lcov-report/index.html`
+* Change directory into the root of the repository i.e `string-class` and run the command `npm test`. This will run the tests and generate an istanbul test coverage report which can also be accessed through the path `coverage/lcov-report/index.html`
 
 #### License
 This project was created under a GNU Public License. See [here] (https://github.com/andela-emabishi/string-class/blob/dev/LICENSE) for more information.
