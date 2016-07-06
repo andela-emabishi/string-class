@@ -68,13 +68,9 @@ This Method returns a number representation of the input currency string.
 * Clone this repository with the command: `git clone https://github.com/andela-emabishi/string-class.git`
 * Install [node.js v6.2.2] (https://nodejs.org/en/) on your machine.
 
-To run the tests in a browser environment:
-* Install server dependencies by running the command ` npm install http-server -g`. More on this [here] (https://www.npmjs.com/package/http-server)
-* Start a server at the root inverted-index folder by typing `http-server` into your terminal program.
-* Copy the address given i.e. `http://127.0.0.1:8080` into a browser of your choice. From the browser, click into the jasmine then SpecRunner folder or use `http://127.0.0.1:8080/jasmine/SpecRunner.html` to run.
-
-To run the tests in a node terminal environment:
-* Change directory into the root of the repository i.e `string-class` and run the command `npm test`. This will run the tests and generate an istanbul test coverage report which can also be accessed through the path `coverage/lcov-report/index.html`
+To run the tests:
+* Change directory into the root of the repository i.e `string-class` and run the command `npm install`. This will install all the dependencies needed for the project to run.
+Run the command `npm test`. This will run the tests and generate an istanbul test coverage report which can also be accessed through the path `coverage/lcov-report/index.html`.
 
 #### License
 This project was created under a GNU Public License. See [here] (https://github.com/andela-emabishi/string-class/blob/dev/LICENSE) for more information.
