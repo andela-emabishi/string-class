@@ -63,12 +63,15 @@ This Method returns a number representation of the input currency string.
 '12,345.11'.fromCurrency() would yield 12345.11
 ```
 
-
-#### Run Tests
+#### Usage
 * Clone this repository with the command: `git clone https://github.com/andela-emabishi/string-class.git`
 * Install [node.js v6.2.2] (https://nodejs.org/en/) on your machine.
+* Start up a terminal instance and run the command `node`.
+* Type `require ('src/string-class.js')` into the terminal to have access to the source file.
+* Use the methods as above in the Functionality section.
+* Type `.exit` to exit the node environment.
 
-To run the tests:
+#### Run Tests
 * Change directory into the root of the repository i.e `string-class` and run the command `npm install`. This will install all the dependencies needed for the project to run.
 Run the command `npm test`. This will run the tests and generate an istanbul test coverage report which can also be accessed through the path `coverage/lcov-report/index.html`.
 
