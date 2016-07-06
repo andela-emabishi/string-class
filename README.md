@@ -64,10 +64,11 @@ This Method returns a number representation of the input currency string.
 ```
 
 
-#### Tests
-To run the tests in a browser environment:
+#### Run Tests
 * Clone this repository with the command: `git clone https://github.com/andela-emabishi/string-class.git`
 * Install [node.js v6.2.2] (https://nodejs.org/en/) on your machine.
+
+To run the tests in a browser environment:
 * Install server dependencies by running the command ` npm install http-server -g`. More on this [here] (https://www.npmjs.com/package/http-server)
 * Start a server at the root inverted-index folder by typing `http-server` into your terminal program.
 * Copy the address given i.e. `http://127.0.0.1:8080` into a browser of your choice. From the browser, click into the jasmine then SpecRunner folder or use `http://127.0.0.1:8080/jasmine/SpecRunner.html` to run.
