@@ -39,7 +39,8 @@ String.prototype.wordCount = function wordCount() {
 };
 
 String.prototype.toCurrency = function toCurrency() {
-  return (parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'))
+  const curr = new RegExp(/(\d)(?=(\d{3})+\.)/g);
+  return (parseFloat(this).toFixed(2).replace(curr, '$1,'))
   .toString();
 };
 
