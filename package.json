@@ -3,8 +3,21 @@
   "version": "1.0.0",
   "description": "Enhance functionality of JavaScript string class",
   "main": "index.js",
+  "dependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.2",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2"
+  },
   "scripts": {
-    "test": "karma start karma.conf.js --single-run && istanbul cover src/string-class.js"
+    "test": "istanbul cover jasmine"
   },
   "repository": {
     "type": "git",
@@ -12,31 +25,13 @@
   },
   "keywords": [
     "jasmine",
-    "jasmine-node",
     "tests",
-    "npm",
-    "class"
+    "node"
   ],
   "author": "Elizabeth Mabishi <frankiemabishi@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andela-emabishi/string-class/issues"
   },
-  "homepage": "https://github.com/andela-emabishi/string-class#readme",
-  "devDependencies": {
-    "coveralls": "^2.11.9",
-    "eslint": "^2.13.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-jsx-a11y": "^1.5.3",
-    "eslint-plugin-react": "^5.2.2",
-    "jasmine-core": "^2.4.1",
-    "karma": "^1.1.0",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^1.0.0",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "phantomjs-prebuilt": "^2.1.7"
-  }
+  "homepage": "https://github.com/andela-emabishi/string-class#readme"
 }
