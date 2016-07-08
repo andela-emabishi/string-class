@@ -51,7 +51,7 @@ String.prototype.wordCount = function wordCount() {
 };
 
 String.prototype.toCurrency = function toCurrency() {
-  /* (/d) -> Maches digits from 0-9 and remembers the particular digit match
+  /* (/d) -> Matches digits from 0-9 and remembers the particular digit match
   * (/d)(?=(\d{3})+\.) -> Only matches a digit if it is followed by
   * three other digits and if the entire string is a float
   */
