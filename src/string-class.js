@@ -53,7 +53,7 @@ String.prototype.wordCount = function wordCount() {
 String.prototype.toCurrency = function toCurrency() {
   /* (/d) -> Matches digits from 0-9 and remembers the particular digit match
   * (/d)(?=(\d{3})+\.) -> Only matches a digit if it is followed by
-  * three other digits and if the entire string is a float
+  * three or moother digits and if the entire string is a float
   */
   const curr = new RegExp(/(\d)(?=(\d{3})+\.)/g);
   return (parseFloat(this).toFixed(2).replace(curr, '$1,'))
@@ -62,4 +62,14 @@ String.prototype.toCurrency = function toCurrency() {
 
 String.prototype.fromCurrency = function fromCurrency() {
   return Number(this.replace(/,/, ''));
+};
+
+String.prototype.isDigit = function isDigit() {
+  const number = new RegExp(/\d/g);
+  return number.test(this);
+};
+
+String.prototype.isEven = function isEven() {
+  const even = new RegExp(/^\d*[02468]$/g);
+  return even.test(this);
 };
