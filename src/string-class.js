@@ -61,15 +61,18 @@ String.prototype.toCurrency = function toCurrency() {
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
+  // Converts a string representation of a currency to a number
   return Number(this.replace(/,/, ''));
 };
 
 String.prototype.isDigit = function isDigit() {
+  // Returns true if the input string is a digit. Returns false otherwise
   const number = new RegExp(/^\d/g);
   return number.test(this);
 };
 
 String.prototype.isEven = function isEven() {
+  // Returns true if the input string is even. Returns false otherwise
   const even = new RegExp(/^\d*[02468]$/g);
   return even.test(this);
 };
