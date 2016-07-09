@@ -65,7 +65,7 @@ String.prototype.fromCurrency = function fromCurrency() {
 };
 
 String.prototype.isDigit = function isDigit() {
-  const number = new RegExp(/\d/g);
+  const number = new RegExp(/^\d/g);
   return number.test(this);
 };
 
