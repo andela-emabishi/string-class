@@ -142,4 +142,24 @@ describe('String Class Extension tests', () => {
       expect('21111111.11'.fromCurrency()).toEqual(21111111.11);
     });
   });
+
+  describe('Test isDigit', () => {
+    it('should return true if the string passed is a digit', () => {
+      expect('123456'.isDigit()).toBeTruthy();
+    });
+
+    it('should return false if the string passed is not a digit', () => {
+      expect(' '.isDigit()).toBeFalsy();
+      expect('This is not a number'.isDigit()).toBeFalsy();
+      expect('*&^%'.isDigit()).toBeFalsy();
+    });
+  });
+  describe('Test Even', () => {
+    it('should return true if the string passed is an even digit', () => {
+      expect('1234'.isEven()).toBeTruthy();
+    });
+    it('should return false if the string passed is an even digit', () => {
+      expect('1234'.isEven()).toBeFalsy();
+    });
+  });
 });
