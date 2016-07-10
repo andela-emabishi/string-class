@@ -2,7 +2,7 @@
 /* eslint-disable no-extend-native */
 
 String.prototype.hasVowels = function hasVowels() {
-  // Is there any vowel in the input string?
+  // Returns true if a vowel exists in the input string. Returns false otherwise.
   const vowels = new RegExp('[aeiou]', 'i');
   return vowels.test(this);
 };
@@ -66,13 +66,13 @@ String.prototype.fromCurrency = function fromCurrency() {
 };
 
 String.prototype.isDigit = function isDigit() {
-  // Returns true if the input string is a digit. Returns false otherwise
+  // Returns true if the input string is a digit. Returns false otherwise.
   const number = new RegExp('^[0-9]+$', 'g');
   return number.test(this);
 };
 
 String.prototype.isEven = function isEven() {
-  // Returns true if the input string is even. Returns false otherwise
+  // Returns true if the input string is even. Returns false otherwise.
   const even = new RegExp('[02468]$', 'g');
   return this.isDigit() ? even.test(this) : false;
 };
