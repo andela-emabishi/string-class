@@ -67,12 +67,12 @@ String.prototype.fromCurrency = function fromCurrency() {
 
 String.prototype.isDigit = function isDigit() {
   // Returns true if the input string is a digit. Returns false otherwise
-  const number = new RegExp(/^\d/g);
+  const number = new RegExp('^[0-9]+$', 'g');
   return number.test(this);
 };
 
 String.prototype.isEven = function isEven() {
   // Returns true if the input string is even. Returns false otherwise
-  const even = new RegExp(/^\d*[02468]$/g);
-  return even.test(this);
+  const even = new RegExp('[02468]$', 'g');
+  return this.isDigit() ? even.test(this) : false;
 };
