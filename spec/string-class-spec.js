@@ -174,7 +174,6 @@ describe('String Class Extension tests', () => {
   });
 
   describe('Test CamelCase', () => {
-    // All words including the first should be camelcased
     it('should return the string input in UpperCamelCase', () => {
       expect('I am to be camelcased'.toCamel()).toBeDefined();
       expect('I want to be camelcase'.toCamel()).toEqual('iWantToBeCamelcase');
