@@ -154,10 +154,12 @@ describe('String Class Extension tests', () => {
       expect('*&^%'.isDigit()).toBeFalsy();
     });
   });
+
   describe('Test Even', () => {
     it('should return true if the string passed is an even digit', () => {
       expect('1234'.isEven()).toBeTruthy();
     });
+
     it('should return false if the string passed is an even digit', () => {
       expect('12345'.isEven()).toBeFalsy();
     });
