@@ -76,3 +76,16 @@ String.prototype.isEven = function isEven() {
   const even = new RegExp('[02468]$', 'g');
   return this.isDigit() ? even.test(this) : false;
 };
+
+String.prototype.toTitle = function toTitle() {
+  return this.replace(/\b\w+/g, function transform(string) {
+    return string.charAt(0).toUpper() + string.substr(1).toLower();
+  });
+};
+
+String.prototype.toCamel = function toCamel() {
+  const camel = new RegExp(/(?:^\w|[A-Z]|\b\w)/g);
+  return this.replace(camel, function transform(letter, index) {
+    return index === 0 ? letter.toLower() : letter.toUpper();
+  }).replace(/\s+/g, '');
+};
