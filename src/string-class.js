@@ -78,12 +78,14 @@ String.prototype.isEven = function isEven() {
 };
 
 String.prototype.toTitle = function toTitle() {
+  // Returns the input string in titlecase
   return this.replace(/\b\w+/g, function transform(string) {
     return string.charAt(0).toUpper() + string.substr(1).toLower();
   });
 };
 
 String.prototype.toCamel = function toCamel() {
+  // Returns the input string in camelcase
   const camel = new RegExp(/(?:^\w|[A-Z]|\b\w)/g);
   return this.replace(camel, function transform(letter, index) {
     return index === 0 ? letter.toLower() : letter.toUpper();
