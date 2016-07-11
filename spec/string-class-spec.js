@@ -162,4 +162,24 @@ describe('String Class Extension tests', () => {
       expect('12345'.isEven()).toBeFalsy();
     });
   });
+
+  describe('Test TitleCase', () => {
+    // Ignore rule for not titlecasing prepositions, conjunctions and articles
+    it('should return the string input in TitleCase', () => {
+      expect('I am to be titlecased'.toTitle()).toBeDefined();
+      expect('I want to be titlecase'.toTitle()).toEqual('I Want To Be Titlecase');
+      expect('can I be title and lowercase?'.toTitle()).toEqual('Can I Be Title And Lowercase?');
+      expect('The rain falls over the plains'.toTitle()).toEqual('The Rain Falls Over The Plains');
+    });
+  });
+
+  describe('Test CamelCase', () => {
+    // All words including the first should be camelcased
+    it('should return the string input in UpperCamelCase', () => {
+      expect('I am to be camelcased'.toCamel()).toBeDefined();
+      expect('I want to be camelcase'.toCamel()).toEqual('iWantToBeCamelcase');
+      expect('can I be camel and lowercase?'.toCamel()).toEqual('canIBeCamelAndLowercase?');
+      expect('The rain falls over the plains'.toCamel()).toEqual('theRainFallsOverThePlains');
+    });
+  });
 });
