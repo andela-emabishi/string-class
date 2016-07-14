@@ -29,7 +29,7 @@ String.prototype.ucFirst = function ucFirst() {
   /* Convert the fist character of the input string to uppercase then concatenate
   * the rest of the string with the uppercase character
   */
-  return this[0].toUpper() + this.slice(1);
+  return this.length ? this[0].toUpper() + this.slice(1) : 'invalid';
 };
 
 String.prototype.isQuestion = function isQuestion() {
@@ -56,8 +56,7 @@ String.prototype.toCurrency = function toCurrency() {
   * three or moother digits and if the entire string is a float
   */
   const curr = new RegExp(/(\d)(?=(\d{3})+\.)/g);
-  return (parseFloat(this).toFixed(2).replace(curr, '$1,'))
-  .toString();
+  return (parseFloat(this).toFixed(2).replace(curr, '$1,'));
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
