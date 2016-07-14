@@ -123,6 +123,10 @@ describe('String Class Extension tests', () => {
       expect('11111.11'.toCurrency()).toBeDefined();
     });
 
+    it('should return NaN if the string passed is not a number', () => {
+      expect('Not a Number'.toCurrency()).toEqual('NaN');
+    });
+
     it('should return a currency representation of the string', () => {
       expect('11111.11'.toCurrency()).toEqual('11,111.11');
       expect('11111'.toCurrency()).toEqual('11,111.00');
