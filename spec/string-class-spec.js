@@ -34,6 +34,7 @@ describe('String Class Extension tests', () => {
       expect('lowercase'.toUpper()).toEqual('LOWERCASE');
       expect('LowerCase'.toUpper()).toEqual('LOWERCASE');
       expect('L0werCAs3& letters'.toUpper()).toEqual('L0WERCAS3& LETTERS');
+      expect(''.toUpper()).toEqual('');
     });
 
     it('should verify that the inbuilt toUpper string method was not called', () => {
@@ -57,6 +58,7 @@ describe('String Class Extension tests', () => {
       expect('LOWERCASE'.toLower()).toEqual('lowercase');
       expect('LowerCase'.toLower()).toEqual('lowercase');
       expect('L0werCAs3& letters'.toLower()).toEqual('l0wercas3& letters');
+      expect(''.toLower()).toEqual('');
     });
 
     it('should verify that the inbuilt toUpper string method was not called', () => {
@@ -76,6 +78,10 @@ describe('String Class Extension tests', () => {
       expect('UCFIRST'.ucFirst()).toEqual('UCFIRST');
       expect('upperCasefirst'.ucFirst()).toEqual('UpperCasefirst');
       expect('uppercase first'.ucFirst()).toEqual('Uppercase first');
+    });
+
+    it('should return - invalid for an empty string', () => {
+      expect(''.ucFirst()).toEqual('invalid');
     });
   });
 
