@@ -1,8 +1,6 @@
 // Disable eslint do not modify native methods
 /* eslint-disable no-extend-native */
 
-/* eslint prefer-arrow-callback: "off"*/
-
 String.prototype.hasVowels = function hasVowels() {
   // Returns true if a vowel exists in the input string. Returns false otherwise.
   const vowels = new RegExp('[aeiou]', 'i');
@@ -28,7 +26,7 @@ String.prototype.toLower = function toLower() {
 };
 
 String.prototype.ucFirst = function ucFirst() {
-  /* Convert the fist character of the input string to uppercase then concatenate
+  /* Convert the first character of the input string to uppercase then concatenate
   * the rest of the string with the uppercase character
   */
   return this.length ? this[0].toUpper() + this.slice(1) : 'invalid';
@@ -74,8 +72,8 @@ String.prototype.isDigit = function isDigit() {
 
 String.prototype.isEven = function isEven() {
   // Returns true if the input string is even. Returns false otherwise.
-  const even = new RegExp('[02468]$', 'g');
-  return this.isDigit() ? even.test(this) : false;
+  const even = new RegExp('^d*[02468]$', 'g');
+  return this == '0' ? false : even.test(this);
 };
 
 String.prototype.toTitle = function toTitle() {
