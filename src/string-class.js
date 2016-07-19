@@ -72,8 +72,8 @@ String.prototype.isDigit = function isDigit() {
 
 String.prototype.isEven = function isEven() {
   // Returns true if the input string is even. Returns false otherwise.
-  const even = new RegExp('^d*[02468]$', 'g');
-  return this == '0' ? false : even.test(this);
+  const even = new RegExp('d*[02468]$', 'g');
+  return this == '0' ? false : even.test(parseInt(this, 10));
 };
 
 String.prototype.toTitle = function toTitle() {
