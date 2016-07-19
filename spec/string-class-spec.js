@@ -137,7 +137,7 @@ describe('String Class Extension tests', () => {
       expect('11111.11'.toCurrency()).toEqual('11,111.11');
       expect('11111'.toCurrency()).toEqual('11,111.00');
       expect('21111111.11'.toCurrency()).toEqual('21,111,111.11');
-      expect('21111.12712'.toCurrency()).toEqual('21111.13');
+      expect('21111.12712'.toCurrency()).toEqual('21,111.13');
     });
   });
 
