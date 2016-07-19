@@ -11,6 +11,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "eqeqeq": [
+          "off"
+      ],
         "indent": [
             "error",
             2
@@ -18,6 +21,9 @@
         "linebreak-style": [
             "error",
             "unix"
+        ],
+        "prefer-arrow-callback": [
+          "off"
         ],
         "quotes": [
             "error",
