@@ -44,10 +44,8 @@ String.prototype.words = function words() {
   * and return an array of words.
   * i.e. Don't split at (A-Z,a-z,0-9 or ')
   */
-  const parser = new RegExp(/^\W|\W$/);
-  const splitter = new RegExp(/[^A-Za-z0-9_']+/);
-  const parsedString = this.trim().replace(parser, '');
-  return parsedString.split(new RegExp(splitter, 'g'));
+  const parsedString = this.trim().replace(new RegExp(/^\W|\W$/g), '');
+  return parsedString.split(new RegExp(new RegExp(/[^A-Za-z0-9_']+/g)));
 };
 
 String.prototype.wordCount = function wordCount() {
