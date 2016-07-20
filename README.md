@@ -62,11 +62,6 @@ This Method returns a number representation of the input currency string.
 ```javaScript
 '12,345.11'.fromCurrency() would yield 12345.11
 ```
-#### isDigit
-This Method evaluates to true if the input string is a digit and false if it does not.
-```javaScript
-'12345el'.isDigit() would yield false
-```
 
 #### isEven
 This Method evaluates to true if the input string is an even digit and false if it is not.
