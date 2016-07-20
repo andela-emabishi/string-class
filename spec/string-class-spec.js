@@ -102,7 +102,8 @@ describe('String Class Extension tests', () => {
   describe('Test words', () => {
     it('should return a list of the words in the string, as an array', () => {
       expect('A rose by any other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
-      expect('A:rose,by?any!other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
+      expect('A:rose,by/any!other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
+      expect(' Pluto isn\'t a planet?'.words()).toEqual(['Pluto', 'isn\'t', 'a', 'planet']);
       expect('rose'.words()).toEqual(['rose']);
       expect('rose'.words()).toEqual(['rose']);
       expect(''.words()).toEqual(['']);
@@ -110,7 +111,6 @@ describe('String Class Extension tests', () => {
 
     it('should verify that the result of the words method is an array object', () => {
       expect('A rose by any other name'.words()).toBeDefined();
-      expect(typeof 'A rose by any other name'.words()).toBe('object');
       expect(Array.isArray('A rose by any other name'.words())).toBe(true);
     });
   });
@@ -151,19 +151,6 @@ describe('String Class Extension tests', () => {
       expect('11,111.11'.fromCurrency()).toEqual(11111.11);
       expect('11111'.fromCurrency()).toEqual(11111.00);
       expect('21111111.11'.fromCurrency()).toEqual(21111111.11);
-    });
-  });
-
-  describe('Test isDigit', () => {
-    it('should return true if the string passed is a digit', () => {
-      expect('123456'.isDigit()).toBe(true);
-    });
-
-    it('should return false if the string passed is not a digit', () => {
-      expect(' '.isDigit()).toBe(false);
-      expect('This is not a number'.isDigit()).toBe(false);
-      expect('*&^%'.isDigit()).toBe(false);
-      expect('not345adigit'.isDigit()).toBe(false);
     });
   });
 
