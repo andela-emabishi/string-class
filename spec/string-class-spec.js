@@ -3,17 +3,17 @@ require('../src/string-class.js');
 describe('String Class Extension tests', () => {
   describe('Test hasVowels', () => {
     it('should return false if the string has no vowels', () => {
-      expect('N VWLS'.hasVowels()).toBeFalsy();
-      expect('n vwls'.hasVowels()).toBeFalsy();
-      expect('@#$^&*%12345'.hasVowels()).toBeFalsy();
-      expect(' '.hasVowels()).toBeFalsy();
+      expect('N VWLS'.hasVowels()).toBe(false);
+      expect('n vwls'.hasVowels()).toBe(false);
+      expect('@#$^&*%12345'.hasVowels()).toBe(false);
+      expect(' '.hasVowels()).toBe(false);
     });
 
     it('should return true if the string has vowels', () => {
-      expect('No vowels'.hasVowels()).toBeTruthy();
-      expect('NO VOWELS'.hasVowels()).toBeTruthy();
-      expect('n0 v0wels'.hasVowels()).toBeTruthy();
-      expect('@#$^&*% 12345 e'.hasVowels()).toBeTruthy();
+      expect('No vowels'.hasVowels()).toBe(true);
+      expect('NO VOWELS'.hasVowels()).toBe(true);
+      expect('n0 v0wels'.hasVowels()).toBe(true);
+      expect('@#$^&*% 12345 e'.hasVowels()).toBe(true);
     });
 
     it('should return a boolean value', () => {
@@ -87,11 +87,11 @@ describe('String Class Extension tests', () => {
 
   describe('Test isQuestion', () => {
     it('should return true if the string is a question', () => {
-      expect('Is this a question?'.isQuestion()).toBeTruthy();
+      expect('Is this a question?'.isQuestion()).toBe(true);
     });
 
     it('should return false if the string is not a question', () => {
-      expect('This is not a question'.isQuestion()).toBeFalsy();
+      expect('This is not a question'.isQuestion()).toBe(false);
     });
 
     it('should return a defined value', () => {
@@ -111,7 +111,7 @@ describe('String Class Extension tests', () => {
     it('should verify that the result of the words method is an array object', () => {
       expect('A rose by any other name'.words()).toBeDefined();
       expect(typeof 'A rose by any other name'.words()).toBe('object');
-      expect(Array.isArray('A rose by any other name'.words())).toBeTruthy();
+      expect(Array.isArray('A rose by any other name'.words())).toBe(true);
     });
   });
 
@@ -156,30 +156,30 @@ describe('String Class Extension tests', () => {
 
   describe('Test isDigit', () => {
     it('should return true if the string passed is a digit', () => {
-      expect('123456'.isDigit()).toBeTruthy();
+      expect('123456'.isDigit()).toBe(true);
     });
 
     it('should return false if the string passed is not a digit', () => {
-      expect(' '.isDigit()).toBeFalsy();
-      expect('This is not a number'.isDigit()).toBeFalsy();
-      expect('*&^%'.isDigit()).toBeFalsy();
-      expect('not345adigit'.isDigit()).toBeFalsy();
+      expect(' '.isDigit()).toBe(false);
+      expect('This is not a number'.isDigit()).toBe(false);
+      expect('*&^%'.isDigit()).toBe(false);
+      expect('not345adigit'.isDigit()).toBe(false);
     });
   });
 
   describe('Test Even', () => {
     it('should return true if the string passed is an even digit', () => {
-      expect('1234'.isEven()).toBeTruthy();
+      expect('1234'.isEven()).toBe(true);
     });
 
     it('should return false if the string passed is not an even digit', () => {
-      expect('12345'.isEven()).toBeFalsy();
-      expect('0'.isEven()).toBeFalsy();
-      expect('-1'.isEven()).toBeFalsy();
-      expect('noteven24'.isEven()).toBeFalsy();
-      expect('evennoteven'.isEven()).toBeFalsy();
-      expect(' '.isEven()).toBeFalsy();
-      expect(''.isEven()).toBeFalsy();
+      expect('12345'.isEven()).toBe(false);
+      expect('0'.isEven()).toBe(false);
+      expect('-1'.isEven()).toBe(false);
+      expect('noteven24'.isEven()).toBe(false);
+      expect('evennoteven'.isEven()).toBe(false);
+      expect(' '.isEven()).toBe(false);
+      expect(''.isEven()).toBe(false);
     });
   });
 
