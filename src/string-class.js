@@ -33,17 +33,21 @@ String.prototype.ucFirst = function ucFirst() {
 };
 
 String.prototype.isQuestion = function isQuestion() {
-  // Is the last letter of the input string a question mark?
+  // Returns true if the last letter of the input string a question mark. False otherwise
   const quest = new RegExp(/\?$/);
   return quest.test(this);
 };
 
 String.prototype.words = function words() {
-  /* Split the input string at any of the provided special characters
-  * and return an array of words
+  /* Filter out any special characters at the beginning and end of the input string.
+  * Split the new string at any non word character excluding the apostrophe.
+  * and return an array of words.
+  * i.e. Don't split at (A-Z,a-z,0-9 or ')
   */
-  const splitter = new RegExp('[:," ";|?!().]');
-  return this.split(splitter);
+  const parser = new RegExp(/^\W|\W$/);
+  const splitter = new RegExp(/[^A-Za-z0-9_']+/);
+  const parsedString = this.trim().replace(parser, '');
+  return parsedString.split(new RegExp(splitter, 'g'));
 };
 
 String.prototype.wordCount = function wordCount() {
@@ -52,8 +56,9 @@ String.prototype.wordCount = function wordCount() {
 
 String.prototype.toCurrency = function toCurrency() {
   /* (/d) -> Matches digits from 0-9 and remembers the particular digit match
-  * (/d)(?=(\d{3})+\.) -> Only matches a digit if it is followed by
-  * three or moother digits and if the entire string is a float
+  * (/d)(?=(\d{3})+\.) -> Lookahead - Only matches a digit if it is followed by
+  * three or other digits and if the entire string is a float.
+  * Upon encountering match, insert a comma character
   */
   const curr = new RegExp(/(\d)(?=(\d{3})+\.)/g);
   return (parseFloat(this).toFixed(2).replace(curr, '$1,'));
@@ -64,20 +69,16 @@ String.prototype.fromCurrency = function fromCurrency() {
   return Number(this.replace(/,/, ''));
 };
 
-String.prototype.isDigit = function isDigit() {
-  // Returns true if the input string is a digit. Returns false otherwise.
-  const number = new RegExp('^[0-9]+$', 'g');
-  return number.test(this);
-};
-
 String.prototype.isEven = function isEven() {
-  // Returns true if the input string is even. Returns false otherwise.
+  // Returns true if the input string is an even number. Returns false otherwise.
   const even = new RegExp('d*[02468]$', 'g');
   return this == '0' ? false : even.test(parseInt(this, 10));
 };
 
 String.prototype.toTitle = function toTitle() {
-  // Returns the input string in titlecase
+  /* Returns the input string in titlecase
+   * Matches any word character multiple times at a word boundary
+   */
   return this.replace(/\b\w+/g, function transform(string) {
     return string.charAt(0).toUpper() + string.substr(1).toLower();
   });
