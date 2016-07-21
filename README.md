@@ -74,12 +74,12 @@ This Method returns the input string in title case
 ```javaScript
 'The rain falls mainly in the plains'.toTitle() would yield The Rain Falls Mainly In The Plains
 ```
+
 #### toCamel
 This Method returns the input string in camel case.
 ```javaScript
 'for variables'.toTitle() would yield forVariables
 ```
-
 
 #### Usage
 * Clone this repository with the command: `git clone https://github.com/andela-emabishi/string-class.git`
