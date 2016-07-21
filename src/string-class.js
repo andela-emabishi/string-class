@@ -79,7 +79,7 @@ String.prototype.fromCurrency = function fromCurrency() {
 String.prototype.isEven = function isEven() {
   // Returns true if the input string is an even number. Returns false otherwise.
   const even = new RegExp('d*[02468]$', 'g');
-  return this == '0' ? false : even.test(parseInt(this, 10));
+  return even.test(parseInt(this, 10));
 };
 
 String.prototype.toTitle = function toTitle() {
