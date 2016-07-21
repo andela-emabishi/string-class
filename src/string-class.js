@@ -89,3 +89,21 @@ String.prototype.toCamel = function toCamel() {
     return index === 0 ? letter.toLower() : letter.toUpper();
   }).replace(/\s+/g, '');
 };
+
+String.prototype.toToggle = function toToggle() {
+  // Returns the input string in togglecase beginning with a lowercase letter
+  const toggled = new RegExp('[a-z]', 'gi');
+  let counter = 0;
+  let toggledString = '';
+
+  for (const letter of this) {
+    if (letter.match(toggled)) {
+      toggledString = toggledString.concat(counter % 2 === 0 ? letter.toLower() :
+      letter.toUpper());
+      counter++;
+    } else {
+      toggledString = toggledString.concat(letter);
+    }
+  }
+  return toggledString;
+};
