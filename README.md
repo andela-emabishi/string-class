@@ -53,7 +53,7 @@ This Method returns a count of the number of words in a string.
 #### cleanWords
 This Method returns an array with the words in the input string filtering out any symbols.
 ```javaScript
-'A?rose;by!any|other_name.'.words() would yield ['A','rose','by','any','other','name']
+'A?rose;by!any|other_name.'.cleanWords() would yield ['A','rose','by','any','other','name']
 ```
 
 #### toCurrency
