@@ -172,7 +172,7 @@ describe('String Class Extension tests', () => {
 
     it('should return false if the string passed is not an even digit', () => {
       expect('12345'.isEven()).toBe(false);
-      expect('0'.isEven()).toBe(false);
+      expect('0'.isEven()).toBe(true);
       expect('-1'.isEven()).toBe(false);
       expect('noteven24'.isEven()).toBe(false);
       expect('evennoteven'.isEven()).toBe(false);
