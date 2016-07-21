@@ -29,17 +29,17 @@ String.prototype.ucFirst = function ucFirst() {
   /* Convert the first character of the input string to uppercase then concatenate
   * the rest of the string with the uppercase character
   */
-  return this.length ? this[0].toUpper() + this.slice(1) : 'invalid';
+  return this.length ? this[0].toUpper() + this.slice(1) : '';
 };
 
 String.prototype.isQuestion = function isQuestion() {
   // Returns true if the last letter of the input string a question mark. False otherwise
-  const quest = new RegExp(/\?$/);
-  return quest.test(this);
+  const questionable = new RegExp(/\?$/);
+  return questionable.test(this);
 };
 
 String.prototype.words = function words() {
-  /* Filter out any special characters at the beginning and end of the input string.
+  /* Filter out any non word characters at the beginning and end of the input string.
   * Split the new string at any non word character excluding the apostrophe.
   * and return an array of words.
   * i.e. Don't split at (A-Z,a-z,0-9 or ')
@@ -58,8 +58,8 @@ String.prototype.toCurrency = function toCurrency() {
   * three or other digits and if the entire string is a float.
   * Upon encountering match, insert a comma character
   */
-  const curr = new RegExp(/(\d)(?=(\d{3})+\.)/g);
-  return (parseFloat(this).toFixed(2).replace(curr, '$1,'));
+  const currency = new RegExp(/(\d)(?=(\d{3})+\.)/g);
+  return (parseFloat(this).toFixed(2).replace(currency, '$1,'));
 };
 
 String.prototype.fromCurrency = function fromCurrency() {

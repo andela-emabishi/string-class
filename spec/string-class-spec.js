@@ -74,20 +74,20 @@ describe('String Class Extension tests', () => {
       expect(typeof 'Uppercase'.ucFirst()).toBe('string');
     });
 
-    it('should return the input string in Titlecase', () => {
+    it('should return the input string with its first letter in uppercase', () => {
       expect('UCFIRST'.ucFirst()).toEqual('UCFIRST');
       expect('upperCasefirst'.ucFirst()).toEqual('UpperCasefirst');
       expect('uppercase first'.ucFirst()).toEqual('Uppercase first');
     });
 
-    it('should return - invalid for an empty string', () => {
-      expect(''.ucFirst()).toEqual('invalid');
+    it('should return an empty string for an empty string as an input', () => {
+      expect(''.ucFirst()).toEqual('');
     });
   });
 
   describe('Test isQuestion', () => {
     it('should return true if the string is a question', () => {
-      expect('Is this a question?'.isQuestion()).toBe(true);
+      expect('Is this a question?'.isQuestion()).toBeTruthy();
     });
 
     it('should return false if the string is not a question', () => {
