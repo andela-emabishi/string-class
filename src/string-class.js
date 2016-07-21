@@ -92,7 +92,7 @@ String.prototype.toCamel = function toCamel() {
 
 String.prototype.toToggle = function toToggle() {
   // Returns the input string in togglecase beginning with a lowercase letter
-  const toggled = new RegExp('[a-z]', 'gi');
+  const toggled = new RegExp(/\w+/g);
   let counter = 0;
   let toggledString = '';
 
