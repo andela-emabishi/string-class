@@ -100,17 +100,14 @@ describe('String Class Extension tests', () => {
   });
 
   describe('Test words', () => {
-    it('should return a list of the words in the string, as an array', () => {
-      expect('A rose by any other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
-      expect('A:rose,by/any!other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
-      expect(' Pluto isn\'t a planet?'.words()).toEqual(['Pluto', 'isn\'t', 'a', 'planet']);
-      expect('rose'.words()).toEqual(['rose']);
-      expect(''.words()).toEqual(['']);
-    });
-
-    it('should verify that the result of the words method is an array object', () => {
-      expect('A rose by any other name'.words()).toBeDefined();
-      expect(Array.isArray('A rose by any other name'.words())).toBe(true);
+    it('shoud return an array of the words in the string', () => {
+      expect('nectar of the gods'.words()).toBeDefined();
+      expect('nectar of the gods'.words()).toEqual(['nectar', 'of', 'the', 'gods']);
+      expect('ambrosia, nectar'.words()).toEqual(['ambrosia,', 'nectar']);
+      expect('@mbrosia'.words()).toEqual([]);
+      expect('22 words'.words()).toEqual(['22', 'words']);
+      expect(''.words()).toEqual([]);
+      expect(' '.words()).toEqual([]);
     });
   });
 
@@ -119,6 +116,21 @@ describe('String Class Extension tests', () => {
       expect('A rose by any other name'.wordCount()).toBeDefined();
       expect('A rose by any other name'.wordCount()).toEqual(6);
       expect(typeof 'A rose by any other name'.wordCount()).toBe('number');
+    });
+  });
+
+  describe('Test cleanWords', () => {
+    it('should return a list of the words in the string, as an array', () => {
+      expect('A rose by any other'.cleanWords()).toEqual(['A', 'rose', 'by', 'any', 'other']);
+      expect('A:rose,by/any!other'.cleanWords()).toEqual(['A', 'rose', 'by', 'any', 'other']);
+      expect(' Pluto isn\'t a planet?'.cleanWords()).toEqual(['Pluto', 'isn\'t', 'a', 'planet']);
+      expect('rose'.cleanWords()).toEqual(['rose']);
+      expect(''.cleanWords()).toEqual(['']);
+    });
+
+    it('should verify that the result of the words method is an array object', () => {
+      expect('A rose by any other name'.words()).toBeDefined();
+      expect(Array.isArray('A rose by any other name'.words())).toBe(true);
     });
   });
 
