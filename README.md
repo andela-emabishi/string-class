@@ -78,7 +78,13 @@ This Method returns the input string in title case
 #### toCamel
 This Method returns the input string in camel case.
 ```javaScript
-'for variables'.toTitle() would yield forVariables
+'for variables'.toCamel() would yield forVariables
+```
+
+#### toToggle
+This Method returns the input string in toggle case.
+```javaScript
+'Gear Shift'.toToggle() would yield gEaR sHiFt
 ```
 
 #### Usage
