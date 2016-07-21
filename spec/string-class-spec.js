@@ -105,7 +105,6 @@ describe('String Class Extension tests', () => {
       expect('A:rose,by/any!other'.words()).toEqual(['A', 'rose', 'by', 'any', 'other']);
       expect(' Pluto isn\'t a planet?'.words()).toEqual(['Pluto', 'isn\'t', 'a', 'planet']);
       expect('rose'.words()).toEqual(['rose']);
-      expect('rose'.words()).toEqual(['rose']);
       expect(''.words()).toEqual(['']);
     });
 
