@@ -187,4 +187,15 @@ describe('String Class Extension tests', () => {
       expect('The rain falls over the plains'.toCamel()).toEqual('theRainFallsOverThePlains');
     });
   });
+
+  describe('Test ToggleCase', () => {
+    it('should return the string input in ToggleCase', () => {
+      expect('Roses are red'.toToggle()).toBeDefined();
+      expect('Violets are blue'.toToggle()).toEqual('vIoLeTs ArE bLuE');
+      expect(''.toToggle()).toEqual('');
+      expect('A'.toToggle()).toEqual('a');
+      expect('123&*!#$|'.toToggle()).toEqual('123&*!#$|');
+      expect('Sugar is sw33t'.toToggle()).toEqual('sUgAr Is Sw33T');
+    });
+  });
 });
