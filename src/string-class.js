@@ -39,6 +39,19 @@ String.prototype.isQuestion = function isQuestion() {
 };
 
 String.prototype.words = function words() {
+  /* Returns an array of the words in the input string
+  * The expression evaluates to true for a word with a letter as it's first character
+  */
+  const beginningVoid = /^\w/;
+  return beginningVoid.test(this) ? this.trim().split(' ') : [];
+};
+
+String.prototype.wordCount = function wordCount() {
+  return this.words().length;
+};
+
+
+String.prototype.cleanWords = function words() {
   /* Filter out any non word characters at the beginning and end of the input string.
   * Split the new string at any non word character excluding the apostrophe.
   * and return an array of words.
@@ -46,10 +59,6 @@ String.prototype.words = function words() {
   */
   const parsedString = this.trim().replace(new RegExp(/^\W|\W$/g), '');
   return parsedString.split(new RegExp(new RegExp(/[^A-Za-z0-9_']+/g)));
-};
-
-String.prototype.wordCount = function wordCount() {
-  return this.words().length;
 };
 
 String.prototype.toCurrency = function toCurrency() {
